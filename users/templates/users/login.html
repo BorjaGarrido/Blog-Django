@@ -1,0 +1,13 @@
+{% extends 'polls/base.html' %}
+
+{% comment %} User login form {% endcomment %}
+
+{% block content %}
+	<h2>Login</h2>
+
+	<form id='form' method='post' action=''>{% csrf_token %}
+	    <table class='formTable'>{{form}}</table>
+		<p><input type='submit' value='Login'></p>
+		<!-- {{ form.errors }} 	{{ form.non_field_errors }} -->
+	</form>
+{% endblock %}

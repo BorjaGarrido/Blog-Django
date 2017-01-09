@@ -1,0 +1,27 @@
+{% extends 'polls/base.html' %}
+
+    {% block content %}
+        <div class="post">
+            {% if post.published_date %}
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+            {% endif %}
+            <h1>{{ post.title }}</h1>
+	    <p>Autor: {{ post.author }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
+	    {% if user == post.author %}
+	    <a class="btn btn-default" href="/polls/{{ post.id }}/edit/"><span class="glyphicon glyphicon-pencil"></span></a>
+	    {% endif %}
+	    {% if user.is_staff %}
+			<a class="btn btn-default" href="/polls/{{ post.id }}/edit/"><span class="glyphicon glyphicon-pencil"></span></a>
+		    	<a class="btn btn-default" href="/polls/{{ post.id }}/delete/"><span class="glyphicon glyphicon-remove"></span></a>
+	    {% endif %}
+	    
+        </div>
+{% endblock %}
+
+
+
+
+
