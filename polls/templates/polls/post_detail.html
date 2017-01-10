@@ -10,7 +10,7 @@
             <h1>{{ post.title }}</h1>
 	    <p>Autor: {{ post.author }}</p>
             <p>{{ post.text|linebreaksbr }}</p>
-	    {% if user == post.author %}
+	    {% if user == post.author and not user.is_staff %}
 	    <a class="btn btn-default" href="/polls/{{ post.id }}/edit/"><span class="glyphicon glyphicon-pencil"></span></a>
 	    {% endif %}
 	    {% if user.is_staff %}

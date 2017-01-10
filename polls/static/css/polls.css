@@ -21,7 +21,7 @@ body {
         background-color: #e82126;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
-	border: black 10px outset;
+	border: red 10px outset;
 }
 .navv {
         background-color: #E2FF2A;
@@ -38,7 +38,7 @@ html {
 	text-align: center;
 	color: #000000;
 	float:left; 
-	height:100%; 
+	height: 2000px; 
 	width: 400px;
 	font-size: 30pt;
 	background-color: #e82126;
@@ -116,7 +116,7 @@ html {
 	font-size: 30pt;
 	color: #000000;
 	float:right; 
-	height:100%;
+	height:2000px;
 	width: 400px; 
 	background-color: #e82126;
 	text-align: center;
