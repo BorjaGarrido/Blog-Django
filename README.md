@@ -58,7 +58,7 @@ se tendrá que crear un archivo urls.py que contendra las direcciones de la prop
     3º. Se crearan las urls que enlazaran los elementos del modelo y la web (App/urls.py)
     4º. Añadir las direcciones oportunas en el html en concreto
     
-8)
+9) Las plantillas html van en App/Template/App. Es necesario crear esa dirección, y en esta se guardarán los .html
 
 ->Las relaciones que se pueden dar en Django son:
         .Muchos a uno: Para definir este tipo de relación usamos ForeignKey(). Sirve para asociar un modelo a muchos modelos diferentes (1:n). Ejemplo: una marca de carros posee varios carros.
