@@ -60,8 +60,20 @@ se tendrá que crear un archivo urls.py que contendra las direcciones de la prop
     
 9) Las plantillas html van en App/Template/App. Es necesario crear esa dirección, y en esta se guardarán los .html
 
+10) Crear el forms.py en App/ y anñadir las formas necesarias:
+    class DestinoForm(forms.ModelForm):
+	class Meta:
+		model = Destino
+        	fields = '__all__'
+
 ->Las relaciones que se pueden dar en Django son:
         .Muchos a uno: Para definir este tipo de relación usamos ForeignKey(). Sirve para asociar un modelo a muchos modelos diferentes (1:n). Ejemplo: una marca de carros posee varios carros.
         .Muchos a muchos: Para definir este tipo de relación usamos ManyToManyField(). Sirve para asociar varios modelos a muchos modelos diferentes (n:n). Ejemplo: diferentes pizzas poseen diferentes toppings.
 
 
+->Asignar autor a una variable
+if form.is_valid():
+		instance = form.save(commit=False)
+		instance.user = request.user
+		instance.save()                        
+user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1)
