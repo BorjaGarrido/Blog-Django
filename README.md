@@ -61,6 +61,7 @@ se tendrá que crear un archivo urls.py que contendra las direcciones de la prop
 9) Las plantillas html van en App/Template/App. Es necesario crear esa dirección, y en esta se guardarán los .html
 
 10) Crear el forms.py en App/ y anñadir las formas necesarias:
+
     class DestinoForm(forms.ModelForm):
 	class Meta:
 		model = Destino
