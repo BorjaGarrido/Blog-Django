@@ -29,7 +29,7 @@ Blousiuto de perpiñón
 
 5) Los modelos nuevos se añaden el "App/models.py"
 
-5) Creación de administrador:
+6) Creación de administrador:
     ->Dentro de la carpeta "App/admin.py":
 
         from django.contrib import admin
@@ -48,7 +48,20 @@ Blousiuto de perpiñón
         
     ->Debe mostrar:
         Superuser created successfully.
-        
 
+7) Las URLs de cada aplicacion se añaden en el archivo urls.py de "Proyecto/Proyecto", mientras que dentro de cada aplicacion
+se tendrá que crear un archivo urls.py que contendra las direcciones de la propia aplicacion. 
 
+8) PASOS A SEGUIR PARA LA CREACION DE ELEMENTOS DE UNA APLICACION:
+    1º. Se crean el modelo correspondiente (App/models.py, makemigrations, migrate)
+    2º. Se diseñan las vistas que trabajaran con el modelo creado (App/views.py)
+    3º. Se crearan las urls que enlazaran los elementos del modelo y la web (App/urls.py)
+    4º. Añadir las direcciones oportunas en el html en concreto
     
+8)
+
+->Las relaciones que se pueden dar en Django son:
+        .Muchos a uno: Para definir este tipo de relación usamos ForeignKey(). Sirve para asociar un modelo a muchos modelos diferentes (1:n). Ejemplo: una marca de carros posee varios carros.
+        .Muchos a muchos: Para definir este tipo de relación usamos ManyToManyField(). Sirve para asociar varios modelos a muchos modelos diferentes (n:n). Ejemplo: diferentes pizzas poseen diferentes toppings.
+
+
